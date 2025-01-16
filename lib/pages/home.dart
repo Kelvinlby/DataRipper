@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:dataripper/interface/data_processor.dart';
 
 
 class Home extends StatefulWidget {
@@ -25,6 +26,8 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    DataProcessor.readParquet(widget.path);
+
     return Scaffold(
       body: Center(
         child: Text(widget.path),
